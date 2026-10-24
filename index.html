@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b100f">
+  <meta name="description" content="Анна — цифровая инвестиционная компания. Демонстрационный сайт с виртуальным счётом и портфелем.">
+  <title>АННА — цифровая инвестиционная компания | Демо</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <button class="wordmark" data-route="home" aria-label="На главную">
+      <span class="brand-icon">A<span class="brand-light">.</span></span>
+      <span class="brand-text"><strong>АННА</strong><small>цифровая инвестиционная компания</small></span>
+    </button>
+    <nav class="header-links" aria-label="Основное меню">
+      <button data-route="home" class="nav-link" data-nav="home">Главная</button>
+      <button data-route="about" class="nav-link" data-nav="about">О компании</button>
+      <button data-route="ideas" class="nav-link" data-nav="ideas">Рекомендации</button>
+      <button data-route="contacts" class="nav-link" data-nav="contacts">Контакты</button>
+    </nav>
+    <div class="header-actions">
+      <span class="demo-pill"><span class="demo-dot"></span> ДЕМО</span>
+      <button class="btn btn-header" id="headerAction" data-action="open-account">Открыть счёт <span aria-hidden="true">↗</span></button>
+    </div>
+  </header>
+
+  <main class="app-shell" id="appShell">
+    <section class="assistant-dock" id="assistantDock" aria-label="Ассистент Анна">
+      <div class="anna-photo-wrap">
+        <div class="anna-photo" aria-label="Фото цифрового аватара Анны">
+          <img class="anna-base" src="assets/anna.webp" alt="Анна — цифровой помощник" fetchpriority="high">
+          <img class="anna-chest idle-layer" src="assets/chest.webp" alt="" aria-hidden="true">
+          <div class="anna-face idle-layer">
+            <img src="assets/face.webp" alt="" aria-hidden="true">
+            <img class="anna-blink-half" id="blinkHalf" src="assets/blink_half.webp" alt="" aria-hidden="true">
+            <img class="anna-blink-closed" id="blinkClosed" src="assets/blink_closed.webp" alt="" aria-hidden="true">
+          </div>
+          <img class="anna-hair-left idle-layer" src="assets/hair_left.webp" alt="" aria-hidden="true">
+          <img class="anna-hair-right idle-layer" src="assets/hair_right.webp" alt="" aria-hidden="true">
+          <div class="portrait-gradient"></div>
+          <span class="portrait-label"><span class="status-light"></span> НА СВЯЗИ</span>
+          <div class="portrait-title"><span class="eyebrow">ВАШ ЦИФРОВОЙ ПРОВОДНИК</span><strong>Привет, я Анна<span class="green-punct">.</span></strong></div>
+        </div>
+      </div>
+      <div class="assistant-chat">
+        <div class="chat-top"><div class="chat-avatar">А</div><div><strong>Диалог с Анной</strong><small>Текстовый режим · демоверсия</small></div><span class="chat-online" title="Локальный режим"></span></div>
+        <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+        <div class="quick-questions" id="quickQuestions"></div>
+        <form class="chat-form" id="chatForm"><input id="chatInput" type="text" maxlength="600" autocomplete="off" placeholder="Спросите Анну..." aria-label="Напишите сообщение Анне" required><button type="submit" aria-label="Отправить сообщение" title="Отправить">➜</button></form>
+        <p class="chat-disclaimer">Анна работает в демонстрационном режиме. Никаких реальных сделок.</p>
+      </div>
+    </section>
+    <section id="pageContent" class="page-content" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer"><span>© АННА · Концепт цифровой компании</span><span>Учебная демонстрация · виртуальные активы и средства · без реальных инвестиций</span></footer>
+  <div class="modal-root" id="modalRoot"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
